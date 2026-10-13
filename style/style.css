@@ -1,0 +1,226 @@
+/* ===== 기본 ===== */
+body {
+  background-color: #111111;
+  color: #f2f2f2;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+}
+
+/* ===== 헤더 ===== */
+.header {
+  padding: 120px 80px 80px;
+  border-bottom: 1px solid #333333;
+}
+.label {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: #ff6a2b;
+  margin-bottom: 24px;
+}
+.title {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.desc {
+  margin-top: 24px;
+  color: #888888;
+  font-size: 16px;
+}
+
+/* ===== 섹션 레이아웃 ===== */
+.section {
+  display: flex;
+  gap: 60px;
+  padding: 80px;
+  border-bottom: 1px solid #333333;
+}
+.section-info {
+  width: 380px;
+  flex-shrink: 0;
+}
+.num {
+  display: block;
+  font-size: 14px;
+  color: #ff6a2b;
+  margin-bottom: 12px;
+}
+.section-info h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.section-info p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+code {
+  display: inline-block;
+  padding: 10px 14px;
+  background-color: #262a33;
+  border-radius: 6px;
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 13px;
+  color: #e6db74;
+}
+.status {
+  color: #ff6a2b;
+}
+
+/* 작업 공간 */
+.stage {
+  flex: 1;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: #1b1b1b;
+  border-radius: 16px;
+}
+.stage-tall {
+  min-height: 600px;
+}
+.stage-col {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* ===== 공통 버튼 ===== */
+.button,
+.box-btn,
+.button-1,
+.button-2 {
+  padding: 16px 28px;
+  border: 1px solid #f2f2f2;
+  border-radius: 40px;
+  color: #f2f2f2;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+.box-btn:hover,
+.button-1:hover,
+.button-2:hover {
+  background-color: #f2f2f2;
+  color: #111111;
+}
+
+/* 02. toggleClass로 붙는 active */
+.button.active {
+  background-color: #ff6a2b;
+  border-color: #ff6a2b;
+  color: #111111;
+  transform: scale(1.2);
+}
+
+/* ===== 03. hover 박스 ===== */
+.box-hover {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d5afe;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+/* ===== 04. 고양이 ===== */
+.cat_img {
+  width: 200px;
+  transition: width 0.3s;
+}
+
+/* ===== 05. box-1 ===== */
+.box-1 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444444;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+/* AND : box-1 이면서 clicked인 요소 */
+.box-1.clicked {
+  background-color: #00c853;
+  color: #111111;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+
+/* ===== 06. box-2 ===== */
+.box-2 {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6a2b;
+  color: #111111;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+
+/* ===== 07. 다중 class ===== */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.row-label {
+  width: 80px;
+  font-size: 13px;
+  color: #888888;
+  letter-spacing: 0.1em;
+}
+.chip,
+.group > div,
+.row > .active,
+.tag-a,
+.tag-b {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #333333;
+  font-size: 14px;
+}
+.chip {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* AND : chip 이면서 active인 요소만 */
+.chip.active {
+  background-color: #ff6a2b;
+  color: #111111;
+}
+
+/* INSIDE : group 안에 있는 active만 */
+.group {
+  padding: 12px;
+  border: 1px dashed #666666;
+  border-radius: 12px;
+}
+.group .active {
+  background-color: #3d5afe;
+}
+
+/* OR : tag-a, tag-b 각각 모두 */
+.tag-a,
+.tag-b {
+  background-color: #00c853;
+  color: #111111;
+}
+
+/* ===== 푸터 ===== */
+.footer {
+  padding: 40px 80px;
+  color: #666666;
+  font-size: 13px;
+}
